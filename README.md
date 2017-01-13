@@ -9,43 +9,73 @@ This script simply counts the headers that match a certain string to count the n
 in both of the files, then calculate a percentage of duplicate reads present.
 
 'Sample_indexXX.duplicates.out' format:"
+
 HISEQ05:409:C5VPLACXX:3:1101:9944:4644
+
 HISEQ05:409:C5VPLACXX:3:1101:8925:8621
+
 HISEQ05:409:C5VPLACXX:3:1101:20860:14294
+
 HISEQ05:409:C5VPLACXX:3:1101:9111:27218
 "
+
 This script will search for the 'HISEQ' portion of the above lines.
 
 'Sample_indexXX_R1.fq' format:"
+
 @HISEQ05:409:C5VPLACXX:3:1101:2229:2087/1
+
 NTTAGCTAAAGAGAAAGCTGGTCAGGCAAGGTTACCTGATCTTAAAGATCCAGAAGCTGTTCAGAAATTCTTCCTTGAAGAGATTCAGCTTGGAGAAGAG
+
 +
+
 44BDFFFFHHHHHJJJJJJJJIJJJJJJJJJHIJJJJJIJJJJJJJJJJJJJJJJJJIJIJJJJJJJJIJJJJJJHHHHHHFFFFFFEEDEEDDDDDDDD
+
 @HISEQ05:409:C5VPLACXX:3:1101:2151:2206/1
+
 GGTTGCCCGTGTGGTTGCTCAGAATGGTTTCATTCTTGTGTGGACCTTAATGCTAACACAGTCAATGCTTTGTGTCTTTTAGCTCCTCGACCTGTTCATG
+
 +
+
 CCBFFFFFHHHHHJIJJJJJJJJJJJJHIJJIJJJJJJIJIJJJJJJJJJJJJJJJJIJJJIJJJJJJJHHHHHHFFFFFFEEDEEEDDDDDDDCDDEEC
+
 "
+
 This script will search for the '@HISEQ' portion of the above lines.
 
 If your lines don't have these headers, edit them below to find a relevant string.
 
 Outputs file 'Duplication_Calculations_SUFFIX.txt' with format:"
+
 sample	total_reads	duplicate_reads	perc_duplicates
+
 JMPD002_index10	848077	110014	12.97
+
 JMPD002_index11	2332845	418071	17.92
+
 JMPD002_index12	2844887	466966	16.41
+
 JMPD002_index13	3966318	915663	23.09
+
 JMPD002_index14	2738062	543384	19.85
+
 "
-##############
-DEPENDENCIES:
-numpy - Numerical Python
-##############
-------------------------
+
 written for Python 2.7.3
-Dan Portik
-daniel.portik@berkeley.edu
-October 2015
+
+DEPENDENCIES:
+
+numpy - Numerical Python
+
 ------------------------
 
+Dan Portik
+
+daniel.portik@berkeley.edu --> daniel.portik@uta.edu
+October 2015
+
+
+
+If you use these scripts, please cite:
+
+Portik, D.M., Smith, L.L., and K. Bi. 2016. An evaluation of transcriptome-based exon capture for frog phylogenomics across multiple scales of divergence (Class: Amphibia, Order: Anura). Molecular Ecology Resources 16: 1069–1083.
