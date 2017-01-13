@@ -8,6 +8,7 @@ The 'Sample_indexXX.duplicates.out' files are created during script 2 (2-ScrubRe
 This script simply counts the headers that match a certain string to count the number of reads
 in both of the files, then calculate a percentage of duplicate reads present.
 
+
 'Sample_indexXX.duplicates.out' format:"
 
 HISEQ05:409:C5VPLACXX:3:1101:9944:4644
@@ -18,6 +19,7 @@ HISEQ05:409:C5VPLACXX:3:1101:20860:14294
 
 HISEQ05:409:C5VPLACXX:3:1101:9111:27218
 "
+
 
 This script will search for the 'HISEQ' portion of the above lines.
 
